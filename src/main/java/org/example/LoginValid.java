@@ -3,16 +3,12 @@ package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginValid {
-    public static void main(String[] args)
-    {
-        // Firefox driver set
-        System.setProperty("webdriver.gecko.driver", "/home/tudoriordache/Downloads/geckodriver-v0.36.0-linux64/geckodriver");
-
+    public static void main(String[] args) {
         // Initialize browser
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new ChromeDriver();
 
         // Open login page
         driver.get("https://cotcampus.codeoftalent.com/login");
@@ -25,11 +21,11 @@ public class LoginValid {
         password.sendKeys("test123");
 
         // invalid credentials
-//        username.sendKeys("gresit@gmail.com");
-//        password.sendKeys("gresit");
+        // username.sendKeys("gresit@gmail.com");
+        // password.sendKeys("gresit");
 
         // Click login button
-        WebElement loginButton = driver.findElement(By.id("submit"));
+        WebElement loginButton = driver.findElement(By.id("_submit"));
         loginButton.click();
 
         // Login verify
