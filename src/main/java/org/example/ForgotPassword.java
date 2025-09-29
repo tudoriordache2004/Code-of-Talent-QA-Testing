@@ -36,10 +36,5 @@ public class ForgotPassword {
             System.out.println("Faza 1 a esuat - nu poti reseta parola");
             driver.quit();
         }
-
-
-
-
-
     }
 }
